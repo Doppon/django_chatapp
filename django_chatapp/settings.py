@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_chatapp',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_chatapp.wsgi.application'
 
+# Channel Setting
+
+ASGI_APPLICATION = 'django_chatapp.routing.application'
+
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "asgiref.inmemory.ChannelLayer",
+#         "ROUTING": "django_chatapp.routing.application",
+#     },
+# }
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
